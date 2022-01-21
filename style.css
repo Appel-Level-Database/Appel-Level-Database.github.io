@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Freight Sans";
+    src: url("font/FreightSans-Bold.ttf");
+    font-weight: bold;
+}
+ @font-face {
+    font-family: "Freight Sans";
+    src: url("font/FreightSans-Medium.ttf");
+}
+
+body {
+	font-family: "Freight Sans";
+	font-size: 16pt;
+	color: black;
+	
+	background-color: #d5eef5;
+	background-image: url(img/bghills.svg), url(img/bg.svg);
+	background-position: bottom, center;
+	background-repeat: repeat-x, repeat;
+	
+	padding: 0.5em 3em;
+}
+html, body  {
+	min-height: 100%;
+}
+
+h1 {
+	margin: 0.2em 0;
+}
+h4, h3, h2 {
+	margin: 0.4em 0;
+}
+
+.center {
+	text-align: center;
+}
