@@ -23,6 +23,16 @@ body {
 html, body  {
 	min-height: 100%;
 }
+@media only screen and (max-width: 720px) {
+	body {
+		padding: 0.5em;
+	}
+}
+@media only screen and (max-height: 300px) {
+	body {
+		padding-top: 0;
+	}
+}
 
 h1 {
 	margin: 0.2em 0;
