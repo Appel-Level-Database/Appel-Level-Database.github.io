@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset='utf-8'>
-		<meta name='viewport' content='width=device-width,initial-scale=1'>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Level Page example | Appel Level Database</title>
-		<link rel='stylesheet' href='style.css'>
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/levelpage.css">
 	</head>
   
 	<body>
-		<h1>Level name</h1>
-		<p>by Test</p>
-    		<img src="https://raw.githubusercontent.com/Appel-Level-Database/Appel-Level-Database.github.io/main/test%20level%20appel.png" alt="Test" width="370" style="vertical-align: top;"><div style="display: inline-block; margin-left: 10px;"> <strong>Level difficulty:</strong> Easy<br> <strong>Level length:</strong> Very short<br> <strong>Compatibility:</strong> All<br> <strong>Description:</strong> Level page test.<br></div>
+		<div class="level-card">
+			<div class="level-area level-thumb-area">
+				<img class="level-thumb" src="img/placeholder-thumb.png">
+			</div>
+			<div class="level-area level-left-area">
+				<h1 class="level-name">Level name</h1> <span class="level-author">by Test</span>
+				<p class="level-desc">Level page test.</p>
+			</div>
+			<div class="level-area level-right-area">
+				<div class="level-subarea level-info-subarea">
+					<strong>Difficulty:</strong> Easy
+					<br> <strong>Length:</strong> Very short
+				</div>
+				<div class="level-subarea level-code-button-subarea">
+					<div class="level-compatibility-notice">Vanilla Appel-compatible</div>
+					<button>Copy code</button>
+				</div>
+			</div>
+		</div>
+		<div class="level-card">
+			<div class="level-area level-thumb-area">
+				<img class="level-thumb" src="img/placeholder-thumb.png">
+			</div>
+			<div class="level-area level-left-area">
+				<h1 class="level-name"> This is a really really really long level name it should wrap</h1> <span class="level-author">by AAAAAAAAAAAAAAAAAAAA</span>
+				<p class="level-desc">The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly but gets faster each minute after you hear this signal bodeboop. A sing lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark. Get ready!… Start. ding﻿</p>
+			</div>
+			<div class="level-area level-right-area">
+				<div class="level-subarea level-info-subarea">
+					<strong>Difficulty:</strong> Egg
+					<br> <strong>Length:</strong> So long it wraps
+				</div>
+				<div class="level-subarea level-code-button-subarea">
+					<div class="level-compatibility-notice warn">Requires Appel Multiplayer</div>
+					<button>Copy code</button>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

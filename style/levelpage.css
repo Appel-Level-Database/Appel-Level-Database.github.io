@@ -1,0 +1,44 @@
+.level-card {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.level-area {
+	padding: 5px;
+	position: relative;
+}
+.level-left-area {
+	flex-grow: 1;
+}
+.level-right-area {
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.level-info-subarea {
+	flex-grow: 1;
+}
+
+.level-name {
+	display: inline-block;
+	margin-right: 3px;
+	margin-bottom: -12px;
+}
+.level-thumb {
+	width: 240px;
+	height: auto;
+}
+.level-author {
+	font-style: italic;
+	font-size: 12pt;
+}
+.level-compatibility-notice {
+	font-size: 12pt;
+}
+.level-compatibility-notice.warn {
+	font-weight: bold;
+	color: red;
+}

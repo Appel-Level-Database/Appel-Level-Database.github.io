@@ -1,20 +1,20 @@
 @font-face {
     font-family: "Freight Sans";
-    src: url("font/FreightSans-Bold.ttf");
+    src: url(../font/FreightSans-Bold.ttf);
     font-weight: bold;
 }
  @font-face {
     font-family: "Freight Sans";
-    src: url("font/FreightSans-Medium.ttf");
+    src: url(../font/FreightSans-Medium.ttf);
 }
 
 body {
-	font-family: "Freight Sans";
+	font-family: "Freight Sans", sans-serif;
 	font-size: 16pt;
 	color: black;
 	
 	background-color: #d5eef5;
-	background-image: url(img/bghills.svg), url(img/bg.svg);
+	background-image: url(../img/bghills.svg), url(../img/bg.svg);
 	background-position: bottom, center;
 	background-repeat: repeat-x, repeat;
 	
@@ -50,4 +50,28 @@ code {
 	outline: solid 1px #aaa; 
 	padding: 5px 10px; 
 	display: block;
+}
+
+
+button, .level-card {
+	background-color: #fffffff2;
+	border: solid 1px #00000023;
+	box-shadow: 0px 3px #00000023;
+	
+	margin: 7px;
+	border-radius: 6.35px;
+	
+	padding: 12px 12px;
+}
+
+button {
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	transition: transform ease-out 0.3s;
+}
+button:hover {
+	background-color: #ffff87f2;
+	transform: scale(1.12);
 }
