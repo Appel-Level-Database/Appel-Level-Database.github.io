@@ -55,7 +55,7 @@ code {
 
 button, .level-card {
 	background-color: #fffffff2;
-	border: solid 1px #00000023;
+	border: solid 2px #00000023;
 	box-shadow: 0px 3px #00000023;
 	
 	margin: 7px;
@@ -71,7 +71,7 @@ button {
 	
 	transition: transform ease-out 0.3s;
 }
-button:hover {
+button:hover, button:focus {
 	background-color: #ffff87f2;
 	transform: scale(1.12);
 }
