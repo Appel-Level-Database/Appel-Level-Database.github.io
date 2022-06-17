@@ -1,4 +1,3 @@
-
 (function() {
 	"use strict";
 
@@ -23,10 +22,12 @@
 			code: d.code || "",
 			difficulty: d.difficulty || "Unknown",
 			length: d.length || "Unknown",
+			ondelete: d.ondelete
 		};
 		
 		const cardRoot = crEl("div", {className: "level-card"});
 		
+		/*
 		const thumbArea = crEl("div",
 			{className: "level-area level-thumb-area"}
 		);
@@ -37,6 +38,7 @@
 				alt: "",
 			})
 		);
+		*/
 		
 		const leftArea = crEl("div",
 			{className: "level-area level-left-area"}
@@ -50,7 +52,7 @@
 		leftArea.appendChild(
 			crEl("span", {
 				className: "level-author",
-				textContent: "by " + info.author,
+				textContent: "uploaded by " + info.author,
 			})
 		);
 		leftArea.appendChild(
@@ -91,17 +93,28 @@
 		));
 		codeBtnSubarea.appendChild(
 			crEl("div", {
-				className: "level-compatibility-notice" + (info.compat === "vanilla" || info.compat === "other" ? "" : " warn"),
+				className: "level-compatibility-notice" + (info.compat === "vanilla" || info.compat === "other" ? "" : " errpr"),
 				textContent: compatStrings[info.compat] || info.compat,
 			})
 		);
+		if (info.ondelete) {
+			const deleteBtn = codeBtnSubarea.appendChild(
+				crEl("button", {
+					textContent: "Delete",
+				})
+			);
+			deleteBtn.addEventListener("click", info.ondelete);
+		}
 		const copyCodeBtn = codeBtnSubarea.appendChild(
 			crEl("button", {
-				textContent: "Copy code",
+				textContent: "Copy Code",
 			})
 		);
+		copyCodeBtn.addEventListener("click", () => {
+			navigator.clipboard.writeText(info.code);
+		});
 		
-		cardRoot.appendChild(thumbArea);
+		// cardRoot.appendChild(thumbArea);
 		cardRoot.appendChild(leftArea);
 		cardRoot.appendChild(rightArea);
 		

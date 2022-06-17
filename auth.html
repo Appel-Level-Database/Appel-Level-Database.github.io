@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Login | Appel Level Database</title>
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/levelpage.css">
+	</head>
+  
+	<body>
+		<h1>Login</h1>
+		<div id="status"></div>
+		<a href="index.html"><button>Return to Homepage</button></a>
+		
+		<script>
+			(async () => {
+				const status = document.getElementById("status");
+				
+				status.textContent = "Logging in...";
+				status.className = "";
+				
+				let req, json;
+				try {
+					req = await fetch(`https://appelldb-server.cst1229.repl.co/auth${location.search}`);
+					json = await req.json();
+				} catch (e) {
+					status.textContent = "Error logging in. The servers might be down.";
+					status.className = "error";
+					return;
+				}
+				
+				if (json.error) {
+					status.textContent = json.error;
+					status.className = "error";
+					return;
+				}
+				
+				document.cookie = `sessionid=${json.sessionId}`;
+				
+				status.textContent = "Logged in as " + json.username;
+				status.className = "success";
+			})();
+		</script>
+	</body>
+</html>

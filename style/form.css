@@ -1,0 +1,81 @@
+button, .level-card, input[type="text"],
+input[type="checkbox"], select, textarea {
+	background-color: #fffffff2;
+	border: solid 2px #00000023;
+	box-shadow: 0px 3px #00000023;
+	
+	margin: 7px;
+	border-radius: 6.35px;
+	
+	padding: 12px 12px;
+}
+
+button, input[type="text"], input[type="checkbox"],
+select, textarea {
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	transition: transform cubic-bezier(0, 1, 1, 1) 0.5s;
+	
+	outline: none;
+}
+button:hover,
+select:hover, select:active,
+input[type="checkbox"]:hover,
+input[type="text"]:focus, input[type="text"]:hover {
+	transform: scale(1.12);
+}
+textarea:focus, textarea:hover {
+	transform: scale(1.03);
+}
+button:focus-visible,
+select:focus-visible,
+input[type="checkbox"]:focus-visible {
+	transform: scale(1.2);
+}
+button:hover, button:active,
+select:focus-visible,
+input[type="checkbox"]:hover, input[type="checkbox"]:focus-visible,
+input[type="text"]:focus,
+textarea:focus {
+	background-color: #ffff87f2;
+}
+button:active,
+input[type="checkbox"]:active {
+	transform: scale(1.02);
+}
+
+input[type="text"], select, textarea {
+	cursor: default;
+	text-transform: none;
+}
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+input[type="checkbox"]:checked {
+	background-image: url("../img/circle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+}
+
+textarea {
+	min-width: 5em;
+	min-height: 2em;
+	max-width: 75em;
+	max-height: 50em;
+}
+
+label {
+	display: block;
+}
+.error {
+	color: red;
+	font-weight: bold;
+}
+.success {
+	color: darkgreen;
+	font-weight: bold;
+}

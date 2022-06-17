@@ -5,10 +5,23 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Home | Appel Level Database</title>
 		<link rel="stylesheet" href="style/style.css">
+		
+		<script defer type="text/javascript" src="js/auth.js"></script>
+		<script defer type="text/javascript" src="js/homepage.js"></script>
 	</head>
   
 	<body>
 		<h1>Appel Level Database</h1>
-    <p>Welcome to the Appel Level Database! Here, you can find Appel levels submitted by users.</p>
+		<p>Welcome to the Appel Level Database! Here, you can find Appel levels submitted by users.</p>
+		
+		<a href="levels.html"><button>Levels</button></a>
+		
+		<div class="auth-only">
+			Currently logged in as <b id="login-user"></b> <button onclick="logOut()">Log Out</button>
+			<br />
+			<a href="create.html"><button>Submit a Level</button></a>
+		</div>
+		
+		<div class="no-auth"><a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name="><button>Log in</button></a> to upload levels!</div>
 	</body>
 </html>

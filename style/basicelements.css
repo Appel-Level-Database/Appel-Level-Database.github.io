@@ -1,0 +1,15 @@
+h1 {
+	margin: 0.2em 0;
+}
+h4, h3, h2 {
+	margin: 0.4em 0;
+}
+.center {
+	text-align: center;
+}
+code {
+	background-color: #eee; 
+	outline: solid 1px #aaa; 
+	padding: 5px 10px; 
+	display: block;
+}

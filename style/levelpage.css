@@ -2,6 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
+	transition: transform cubic-bezier(0, 1, 1, 1) 1s;
+}
+.level-card:hover {
+	transform: rotate(0.5deg);
 }
 
 .level-area {
@@ -37,8 +41,4 @@
 }
 .level-compatibility-notice {
 	font-size: 12pt;
-}
-.level-compatibility-notice.warn {
-	font-weight: bold;
-	color: red;
 }
