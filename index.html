@@ -7,19 +7,16 @@
 		<link rel="stylesheet" href="style/style.css">
 		
 		<script defer type="text/javascript" src="js/auth.js"></script>
-		<script defer type="text/javascript" src="js/homepage.js"></script>
+		<script defer type="text/javascript" src="js/navbar.js"></script>
 	</head>
   
 	<body>
-		<h1>Appel Level Database</h1>
-		<p>Welcome to the Appel Level Database! Here, you can find Appel levels submitted by users.</p>
-		
-		<a href="levels.html"><button>Levels</button></a> <a class="auth-only" href="create.html"><button>Submit a Level</button></a> <a class="admin-only" href="admin.html"><button>Admin</button></a>
-		
-		<div class="auth-only">
-			Currently logged in as <b id="login-user"></b> <button onclick="logOut()">Log Out</button>
-		</div>
-		
-		<div class="no-auth"><a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to upload levels!</div>
+		<h2>Appel Level Database</h2>
+		<p>
+			Welcome to the Appel Level Database! Here, you can find Appel levels submitted by users.
+		</p>
+		<p class="no-auth">
+			<a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to be able to submit levels!
+		</p>
 	</body>
 </html>

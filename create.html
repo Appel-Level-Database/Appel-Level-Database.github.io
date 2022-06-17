@@ -8,12 +8,17 @@
 		
 		<script defer type="text/javascript" src="js/auth.js"></script>
 		<script defer type="text/javascript" src="js/levelform.js"></script>
+		<script defer type="text/javascript" src="js/navbar.js"></script>
 	</head>
   
 	<body>
-		<div class="level-card auth-only">
-			<h2>Submit a Level</h2>
-			<form id="submit-level">
+		<h2>Submit a Level</h2>
+		<div class="level-card">
+			<div class="no-auth">
+				<a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to upload levels!
+			</div>
+			 
+			<form id="submit-level" class="auth-only">
 				<label for="submit-name">Name</label>
 				<input maxlength="50" id="submit-name" name="name" type="text"/>
 				
@@ -56,9 +61,5 @@
 				<div id="submission-status"></div>
 			</form>
 		</div>
-		<div class="level-card no-auth">
-			<h2>Submit a Level</h2>
-			<a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to upload levels!
-		 </div>
 	</body>
 </html>

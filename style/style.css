@@ -1,5 +1,6 @@
 @import "basicelements.css";
 @import "form.css";
+@import "navbar.css";
 
 @font-face {
     font-family: "Freight Sans";
@@ -11,11 +12,12 @@
     src: url(../font/FreightSans-Medium.ttf);
 }
 
-body {
+:root {
 	font-family: "Freight Sans", sans-serif;
 	font-size: 16pt;
 	color: black;
-	
+}
+body {
 	background-color: #d5eef5;
 	background-image: url(../img/bghills.svg), url(../img/bg.svg);
 	background-position: bottom, center;
@@ -23,7 +25,7 @@ body {
 	
 	margin: 1em 3em;
 }
-html, body  {
+:root, body  {
 	min-height: 100%;
 }
 @media only screen and (max-width: 720px) {
@@ -35,4 +37,15 @@ html, body  {
 	body {
 		margin-top: 0.25em;
 	}
+}
+
+.no-auth, .auth-only, .no-admin, .admin-only {
+	display: none;
+}
+
+:root.js.auth-authed .auth-only,
+:root.js.auth-admin .admin-only,
+:root.js:not(.auth-authed) .no-auth,
+:root.js:not(.auth-authed) .no-admin {
+	display: unset;
 }

@@ -1,0 +1,32 @@
+#navbar {
+	width: 100vw;
+	height: 3em;
+	padding: 0.5em 1em;
+	box-sizing: border-box;
+	
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	
+	background-color: #3ac54d;
+	border-bottom: solid 6px #39b54a;
+	
+	z-index: 500;
+	
+	color: white;
+}
+#navbar > .navbar-right {
+	flex-grow: 1;
+	text-align: right;
+}
+#navbar .title-link {
+	color: white;
+	text-decoration: none;
+	
+	display: inline-block;
+}
+
+#navbar .navbar-pad {
+	padding-left: 1em;
+}

@@ -6,12 +6,12 @@
 		<title>Login | Appel Level Database</title>
 		<link rel="stylesheet" href="style/style.css">
 		<link rel="stylesheet" href="style/levelpage.css">
+		<script defer type="text/javascript" src="js/navbar.js"></script>
 	</head>
   
 	<body>
-		<h1>Login</h1>
+		<h2>Login</h2>
 		<div id="status"></div>
-		<a href="index.html"><button>Return to Homepage</button></a>
 		
 		<script>
 			(async () => {
@@ -38,7 +38,7 @@
 				
 				document.cookie = `sessionid=${json.sessionId}`;
 				
-				status.textContent = "Logged in as " + json.username;
+				status.textContent = "Logged in as " + json.username ". You can return to the homepage now.";
 				status.className = "success";
 			})();
 		</script>
