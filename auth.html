@@ -4,8 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Login | Appel Level Database</title>
+		
 		<link rel="stylesheet" href="style/style.css">
 		<link rel="stylesheet" href="style/levelpage.css">
+		
+		<script defer type="text/javascript" src="js/auth.js"></script>
 		<script defer type="text/javascript" src="js/navbar.js"></script>
 	</head>
   
@@ -40,6 +43,15 @@
 				
 				status.textContent = "Logged in as " + json.username + ". You can return to the homepage now.";
 				status.className = "success";
+				
+				document.documentElement.classList.add("auth-authed");
+				if (json.account && json.account.admin) {
+					document.documentElement.classList.add("auth-admin");
+				}
+				
+				const loginUser = document.getElementById("login-user");
+				if (json.account && loginUser)
+					loginUser.textContent = json.account.scratchUsername;
 			})();
 		</script>
 	</body>
