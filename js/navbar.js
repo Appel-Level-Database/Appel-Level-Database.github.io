@@ -25,17 +25,17 @@
 	
 	document.head.after(navbar); 
 	
-	let auth;
-	try {
-		auth = await window.getAuth();
-	} catch(e) {return};
-	
 	window.logOut = async function() {
-		if (!auth || auth.error) return;
+		if (!window.auth || window.auth.error) return;
 		
 		await fetch("https://appelldb-server.cst1229.repl.co/logout?sessionId=" + auth.sessionId);
 		location.reload();
 	}
+	
+	let auth;
+	try {
+		auth = await window.getAuth();
+	} catch(e) {return};
 	
 	if (auth.error) return;
 	document.getElementById("login-user").textContent = auth.username;
