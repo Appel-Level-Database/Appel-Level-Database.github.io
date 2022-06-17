@@ -23,16 +23,16 @@
 </div>
 `;
 	
-	document.head.after(navbar); 
+	document.head.after(navbar);
 	
+	let auth;
 	window.logOut = async function() {
-		if (!window.auth || window.auth.error) return;
+		if (!auth || auth.error) return;
 		
 		await fetch("https://appelldb-server.cst1229.repl.co/logout?sessionId=" + auth.sessionId);
 		location.reload();
 	}
 	
-	let auth;
 	try {
 		auth = await window.getAuth();
 	} catch(e) {return};
