@@ -30,3 +30,14 @@
 #navbar .navbar-pad {
 	padding-left: 1em;
 }
+
+@media only screen and (max-width: 1040px) {
+	#navbar .title-link {
+		display: none;
+	}
+}
+@media only screen and (max-height: 300px) {
+	#navbar {
+		position: static;
+	}
+}
