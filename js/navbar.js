@@ -6,6 +6,7 @@
 
 <span class="navbar-pad"></span>
 
+<a class="home-btn" href="index.html"><button>Home</button></a>
 <a href="levels.html"><button>Levels</button></a>
 <span class="auth-only">
 	<a href="create.html"><button>Submit a Level</button></a>
