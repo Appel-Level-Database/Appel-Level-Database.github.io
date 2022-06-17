@@ -52,6 +52,11 @@
 				const loginUser = document.getElementById("login-user");
 				if (json.account && loginUser)
 					loginUser.textContent = json.account.scratchUsername;
+					
+				window.logOut = async function() {
+					await fetch("https://appelldb-server.cst1229.repl.co/logout?sessionId=" + auth.sessionId);
+					location.reload();
+				}
 			})();
 		</script>
 	</body>
