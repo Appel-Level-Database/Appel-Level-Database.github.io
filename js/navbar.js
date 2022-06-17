@@ -30,11 +30,13 @@
 		auth = await window.getAuth();
 	} catch(e) {return};
 	
-	if (auth.error) return;
-	document.getElementById("login-user").textContent = auth.username;
-	
 	window.logOut = async function() {
+		if (!auth || auth.error) return;
+		
 		await fetch("https://appelldb-server.cst1229.repl.co/logout?sessionId=" + auth.sessionId);
 		location.reload();
 	}
+	
+	if (auth.error) return;
+	document.getElementById("login-user").textContent = auth.username;
 })();
