@@ -12,9 +12,13 @@
 	
 	const authOnly = document.getElementsByClassName("auth-only");
 	const noAuth = document.getElementsByClassName("no-auth");
+	const adminOnly = document.getElementsByClassName("admin-only");
+	const noAdmin = document.getElementsByClassName("no-admin");
 	
 	for (const e of noAuth) e.style.display = "";
 	for (const e of authOnly) e.style.display = "none";
+	for (const e of adminOnly) e.style.display = "none";
+	for (const e of noAdmin) e.style.display = "none";
 	
 	const authPromise = new Promise(async (resolve, reject) => {
 		if (!cookies.sessionid) {reject(); return;}
@@ -26,11 +30,14 @@
 		const resp = await req.json();
 		
 		if (resp.error) {reject(); return;}
-			
-		resolve(resp);
 		
 		for (const e of noAuth) e.style.display = "none";
 		for (const e of authOnly) e.style.display = "";
+		if (resp.account && resp.account.admin) {
+			for (const e of adminOnly) e.style.display = "";
+			for (const e of noAdmin) e.style.display = "";
+		}
+		resolve(resp);
 	});
 	
 	window.getAuth = () => authPromise;

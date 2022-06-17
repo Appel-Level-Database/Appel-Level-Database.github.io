@@ -44,7 +44,7 @@
 			{className: "level-area level-left-area"}
 		);
 		leftArea.appendChild(
-			crEl("h1", {
+			crEl("h2", {
 				className: "level-name",
 				textContent: info.name,
 			})
@@ -93,7 +93,7 @@
 		));
 		codeBtnSubarea.appendChild(
 			crEl("div", {
-				className: "level-compatibility-notice" + (info.compat === "vanilla" || info.compat === "other" ? "" : " errpr"),
+				className: "level-compatibility-notice" + (info.compat === "vanilla" || info.compat === "other" ? "" : " error"),
 				textContent: compatStrings[info.compat] || info.compat,
 			})
 		);
