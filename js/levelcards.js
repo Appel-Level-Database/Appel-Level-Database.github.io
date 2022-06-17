@@ -22,7 +22,8 @@
 			code: d.code || "",
 			difficulty: d.difficulty || "Unknown",
 			length: d.length || "Unknown",
-			ondelete: d.ondelete
+			ondelete: d.ondelete,
+			date: d.date || null,
 		};
 		
 		const cardRoot = crEl("div", {className: "level-card"});
@@ -87,6 +88,31 @@
 		infoSubarea.appendChild(
 			document.createTextNode(info.length)
 		);
+		if (info.date) {
+			infoSubarea.appendChild(
+				crEl("br", {})
+			);
+			infoSubarea.appendChild(
+				crEl("b", {
+					textContent: "Uploaded at: ",
+				})
+			);
+			
+			const date = new Date(info.date);
+			const dateString = date.toLocaleString();
+			const dateHover = `Time is in your local timezone (UTC+${-(date.getTimezoneOffset()/60)}).
+12-hour time: ${date.toLocaleString([], {hourCycle: "h12"})}
+24-hour time: ${date.toLocaleString([], {hourCycle: "h24"})}
+ISO: ${date.toISOString()}`;
+			
+			infoSubarea.appendChild(
+				crEl("span", {
+					textContent: dateString,
+					title: dateHover,
+					className: "level-date",
+				})
+			);
+		}
 		
 		const codeBtnSubarea = rightArea.appendChild(crEl("div",
 			{className: "level-subarea level-code-button-subarea"}

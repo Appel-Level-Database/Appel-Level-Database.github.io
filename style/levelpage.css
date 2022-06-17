@@ -42,3 +42,7 @@
 .level-compatibility-notice {
 	font-size: 12pt;
 }
+.level-date {
+	font-style: italic;
+	text-decoration: 2px underline dotted;
+}
