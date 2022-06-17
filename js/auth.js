@@ -13,11 +13,14 @@
 	const authPromise = new Promise(async (resolve, reject) => {
 		if (!cookies.sessionid) {reject(); return;}
 		
-		const req = await fetch(
-			"https://appelldb-server.cst1229.repl.co/session?sessionId="
-			+ encodeURIComponent(cookies.sessionid)
-		);
-		const resp = await req.json();
+		let req, resp;
+		try {
+			req = await fetch(
+				"https://appelldb-server.cst1229.repl.co/session?sessionId="
+				+ encodeURIComponent(cookies.sessionid)
+			);
+			resp = await req.json();
+		} catch(e) {reject(); return;}
 		
 		if (resp.error) {reject(); return;}
 		
