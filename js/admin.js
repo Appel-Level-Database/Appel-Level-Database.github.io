@@ -108,7 +108,7 @@ ISO: ${date.toISOString()}`;
 		const ultraCB = addField("Ultra-admin", 
 			crEl("input", {
 				type: "checkbox",
-				disabled: cantEditUser,
+				disabled: cantEditUser || !auth.account.ultra,
 				checked: user.ultra,
 			})
 		);
