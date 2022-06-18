@@ -13,3 +13,8 @@ code {
 	padding: 5px 10px; 
 	display: block;
 }
+
+.date {
+	font-style: italic;
+	text-decoration: 2px underline dotted;
+}

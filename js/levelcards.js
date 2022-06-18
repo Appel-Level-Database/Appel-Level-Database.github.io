@@ -26,7 +26,7 @@
 			date: d.date || null,
 		};
 		
-		const cardRoot = crEl("div", {className: "level-card"});
+		const cardRoot = crEl("div", {className: "card level-card"});
 		
 		/*
 		const thumbArea = crEl("div",
@@ -109,7 +109,7 @@ ISO: ${date.toISOString()}`;
 				crEl("span", {
 					textContent: dateString,
 					title: dateHover,
-					className: "level-date",
+					className: "date",
 				})
 			);
 		}

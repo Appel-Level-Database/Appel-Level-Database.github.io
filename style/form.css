@@ -1,4 +1,8 @@
-button, .level-card, input[type="text"],
+input {
+	vertical-align: middle;
+}
+
+button, .card, input[type="text"],
 input[type="checkbox"], select, textarea {
 	background-color: #fffffff2;
 	border: solid 2px #00000023;
@@ -8,6 +12,11 @@ input[type="checkbox"], select, textarea {
 	border-radius: 6.35px;
 	
 	padding: 12px 12px;
+	
+	transition: transform cubic-bezier(0, 1, 1, 1) 1s;
+}
+.level-card:hover {
+	transform: rotate(0.5deg);
 }
 
 button, input[type="text"], input[type="checkbox"],
@@ -15,8 +24,6 @@ select, textarea {
 	font-size: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
-	
-	transition: transform cubic-bezier(0, 1, 1, 1) 0.5s;
 	
 	outline: none;
 }
@@ -78,4 +85,13 @@ label {
 .success {
 	color: darkgreen;
 	font-weight: bold;
+}
+
+:root input:disabled {
+	filter: brightness(0.9);
+	
+	transform: none;
+	transition: none;
+	
+	background-color: white;
 }
