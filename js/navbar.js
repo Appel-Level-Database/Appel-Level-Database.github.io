@@ -1,6 +1,5 @@
 (async () => {
-	const navbar = document.createElement("div");
-	navbar.id = "navbar";
+	const navbar = document.getElementById("navbar");
 	navbar.innerHTML = `
 <a class="title-link" href="index.html"><h1>Appel Level Database</h1></a>
 
@@ -23,8 +22,7 @@
 	</span>
 </div>
 `;
-	
-	document.head.after(navbar);
+	navbar.classList.add("filled");
 	
 	let auth;
 	

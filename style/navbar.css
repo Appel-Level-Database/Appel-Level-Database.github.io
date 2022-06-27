@@ -60,3 +60,13 @@
 		padding-right: 0.3em;
 	}
 }
+
+#navbar:not(.filled)::before {
+	content: "";
+	display: inline-block;
+	
+	height: 1.6em;
+	width: 15em;
+	background-color: white;
+	border-radius: 5px;
+}

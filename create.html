@@ -5,62 +5,64 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Submit a Level | Appel Level Database</title>
 		
-		<link rel="stylesheet" href="style/style.css">
+		<link defer rel="stylesheet" href="style/style.css">
 		
 		<script defer type="text/javascript" src="js/auth.js"></script>
 		<script defer type="text/javascript" src="js/levelform.js"></script>
 		<script defer type="text/javascript" src="js/navbar.js"></script>
 	</head>
-  
+	<div id="navbar"></div>
 	<body>
-		<h2>Submit a Level</h2>
-		<div class="card">
-			<div class="no-auth">
-				<a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to upload levels!
+		<div id="content">
+			<h2>Submit a Level</h2>
+			<div class="card">
+				<div class="no-auth">
+					<a href="https://auth.itinerary.eu.org/auth/?redirect=QXBwZWwtTGV2ZWwtRGF0YWJhc2UuZ2l0aHViLmlvL2F1dGguaHRtbA==&name=Appel Level Database"><button>Log in</button></a> to upload levels!
+				</div>
+				 
+				<form id="submit-level" class="auth-only">
+					<label for="submit-name">Name</label>
+					<input maxlength="50" id="submit-name" name="name" type="text"/>
+					
+					<label for="submit-desc">Description</label>
+					<textarea maxlength="500" id="submit-desc" name="desc" rows="10" cols="80"></textarea>
+					
+					<label for="submit-code">Level Code</label>
+					<input maxlength="10000" id="submit-code" name="code" type="text"/>
+					
+					<label for="submit-difficulty">Difficulty</label>
+					<select id="submit-difficulty" name="difficulty">
+						<option value="Auto">Auto</option>
+						<option value="Very Easy">Very Easy</option>
+						<option value="Easy">Easy</option>
+						<option value="Normal" selected>Normal</option>
+						<option value="Hard">Hard</option>
+						<option value="Extreme">Extreme</option>
+					</select>
+					
+					<label for="submit-length">Length</label>
+					<select id="submit-length" name="length">
+						<option value="Very Short">Very Short</option>
+						<option value="Short">Short</option>
+						<option value="Medium" selected>Medium</option>
+						<option value="Long">Long</option>
+						<option value="Very Long">Very Long</option>
+						<option value="Epic">Epic</option>
+					</select>
+					
+					<label for="submit-compat">Compatibility</label>
+					<select id="submit-compat" name="compat">
+						<option value="vanilla" selected>Vanilla Appel</option>
+						<option value="multiplayer">Appel Multiplayer</option>
+						<option value="other">Other</option>
+					</select>
+					
+					<br />
+					
+					<button>Submit</button>
+					<div id="submission-status"></div>
+				</form>
 			</div>
-			 
-			<form id="submit-level" class="auth-only">
-				<label for="submit-name">Name</label>
-				<input maxlength="50" id="submit-name" name="name" type="text"/>
-				
-				<label for="submit-desc">Description</label>
-				<textarea maxlength="500" id="submit-desc" name="desc" rows="10" cols="80"></textarea>
-				
-				<label for="submit-code">Level Code</label>
-				<input maxlength="10000" id="submit-code" name="code" type="text"/>
-				
-				<label for="submit-difficulty">Difficulty</label>
-				<select id="submit-difficulty" name="difficulty">
-					<option value="Auto">Auto</option>
-					<option value="Very Easy">Very Easy</option>
-					<option value="Easy">Easy</option>
-					<option value="Normal" selected>Normal</option>
-					<option value="Hard">Hard</option>
-					<option value="Extreme">Extreme</option>
-				</select>
-				
-				<label for="submit-length">Length</label>
-				<select id="submit-length" name="length">
-					<option value="Very Short">Very Short</option>
-					<option value="Short">Short</option>
-					<option value="Medium" selected>Medium</option>
-					<option value="Long">Long</option>
-					<option value="Very Long">Very Long</option>
-					<option value="Epic">Epic</option>
-				</select>
-				
-				<label for="submit-compat">Compatibility</label>
-				<select id="submit-compat" name="compat">
-					<option value="vanilla" selected>Vanilla Appel</option>
-					<option value="multiplayer">Appel Multiplayer</option>
-					<option value="other">Other</option>
-				</select>
-				
-				<br />
-				
-				<button>Submit</button>
-				<div id="submission-status"></div>
-			</form>
 		</div>
 	</body>
 </html>

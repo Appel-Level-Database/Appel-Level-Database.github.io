@@ -3,31 +3,37 @@
 @import "navbar.css";
 
 @font-face {
-    font-family: "Freight Sans";
-    src: url(../font/FreightSans-Bold.ttf);
-    font-weight: bold;
+	font-family: "Freight Sans";
+	src: url(../font/FreightSans-Medium.ttf);
+	font-display: swap;
 }
 @font-face {
-    font-family: "Freight Sans";
-    src: url(../font/FreightSans-Medium.ttf);
+	font-family: "Freight Sans";
+	src: url(../font/FreightSans-Bold.ttf);
+	font-weight: bold;
+	font-display: swap;
 }
 
-:root {
+body {
 	font-family: "Freight Sans", sans-serif;
 	font-size: 16pt;
 	color: black;
-}
-body {
+	
 	background-color: #d5eef5;
 	background-image: url(../img/bghills.svg), url(../img/bg.svg);
 	background-position: bottom, center;
 	background-repeat: repeat-x, repeat;
+	
+	margin: 0;
+}
+#content {
 	
 	margin: 1em 3em;
 }
 :root, body  {
 	min-height: 100%;
 }
+
 @media only screen and (max-width: 720px) {
 	body {
 		margin: 0.75em;
