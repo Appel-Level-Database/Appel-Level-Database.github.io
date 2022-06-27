@@ -27,7 +27,6 @@ body {
 	margin: 0;
 }
 #content {
-	
 	margin: 1em 3em;
 }
 :root, body  {
@@ -35,12 +34,12 @@ body {
 }
 
 @media only screen and (max-width: 720px) {
-	body {
+	#content {
 		margin: 0.75em;
 	}
 }
 @media only screen and (max-height: 300px) {
-	body {
+	#content {
 		margin-top: 0.25em;
 	}
 }
