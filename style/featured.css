@@ -1,0 +1,34 @@
+.level-card {
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	overflow: auto;
+	position: relative;
+	width: 15em;
+	height: 16em;
+}
+
+.level-info-area {
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.level-buttons-area {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.level-name {
+	display: inline-block;
+	margin-bottom: -12px;
+	margin-top: 0;
+}
+.level-author {
+	font-style: italic;
+	font-size: 12pt;
+}
+.level-compatibility-notice {
+	font-size: 12pt;
+}
+.level-desc {
+	margin: 0.25em 0;
+}

@@ -40,7 +40,10 @@ The servers might be down.`;
 					level.by.id === auth.userId ||
 					auth.account.admin
 				)
-			) ? () => {deleteLevel(id)} : null
+			) ? () => {deleteLevel(id)} : null,
+			onfeature: (
+				auth && auth.account.admin
+			) ? () => {featureLevel(id)} : null,
 		}));
 	}
 	
@@ -54,6 +57,20 @@ The servers might be down.`;
 			}
 		);
 		location.reload();
+	}
+	
+	async function featureLevel(id) {
+		await fetch(
+			`https://appelldb-server.cst1229.repl.co/levels/${id}/?sessionId=${auth.sessionId}`,
+			{
+				method: "PATCH",
+				body: JSON.stringify({featured: !resp[id].featured}),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		);
+		resp[id].featured = !resp[id].featured;
 	}
 	
 	status.textContent = "";
