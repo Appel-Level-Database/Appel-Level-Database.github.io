@@ -1,10 +1,14 @@
+#featured {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+}
+
 .level-card {
 	display: inline-flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	overflow: auto;
 	position: relative;
-	width: 15em;
 	height: 16em;
 }
 
